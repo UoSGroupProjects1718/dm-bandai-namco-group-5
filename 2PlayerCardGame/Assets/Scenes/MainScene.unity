@@ -187,7 +187,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 119179641}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 561076462}
+        m_MethodName: Snap
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &119179641
@@ -308,7 +319,7 @@ GameObject:
   - component: {fileID: 267613721}
   - component: {fileID: 267613720}
   m_Layer: 0
-  m_Name: CurrentCard
+  m_Name: TopCard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -321,16 +332,16 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 267613718}
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 50.4, y: 0, z: 0}
+  m_LocalPosition: {x: 77.9, y: 50, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 382097973}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 50.4, y: 0}
-  m_SizeDelta: {x: 130.7, y: 223.4}
+  m_AnchoredPosition: {x: 77.9, y: 50}
+  m_SizeDelta: {x: 119.1, y: 203.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &267613720
 MonoBehaviour:
@@ -351,7 +362,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300028, guid: 3e09749be5372674da4e5a21224e2223, type: 3}
+  m_Sprite: {fileID: 21300104, guid: 3e09749be5372674da4e5a21224e2223, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -440,7 +451,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 286535499}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 561076462}
+        m_MethodName: Snap
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 0
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &286535499
@@ -565,6 +587,7 @@ RectTransform:
   - {fileID: 286535497}
   - {fileID: 119179639}
   - {fileID: 1980378680}
+  - {fileID: 1009929518}
   - {fileID: 2086028298}
   - {fileID: 267613719}
   m_Father: {fileID: 0}
@@ -655,6 +678,12 @@ MonoBehaviour:
   - {fileID: 21300044, guid: 3e09749be5372674da4e5a21224e2223, type: 3}
   - {fileID: 21300046, guid: 3e09749be5372674da4e5a21224e2223, type: 3}
   - {fileID: 21300048, guid: 3e09749be5372674da4e5a21224e2223, type: 3}
+  top: {fileID: 267613718}
+  second: {fileID: 2086028297}
+  third: {fileID: 1009929517}
+  cardBack: {fileID: 21300104, guid: 3e09749be5372674da4e5a21224e2223, type: 3}
+  player1DeckSize: {fileID: 2022906836}
+  player2DeckSize: {fileID: 240641693}
 --- !u!4 &561076463
 Transform:
   m_ObjectHideFlags: 0
@@ -817,7 +846,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 722562194}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 561076462}
+        m_MethodName: Button_PopCard
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &722562194
@@ -927,6 +967,74 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 919131184}
+--- !u!1 &1009929517
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1009929518}
+  - component: {fileID: 1009929520}
+  - component: {fileID: 1009929519}
+  m_Layer: 0
+  m_Name: ThirdCard
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1009929518
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1009929517}
+  m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: -76, y: -50, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 382097973}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -76, y: -50}
+  m_SizeDelta: {x: 119.1, y: 203.5}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1009929519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1009929517}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 21300104, guid: 3e09749be5372674da4e5a21224e2223, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &1009929520
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1009929517}
 --- !u!1 &1124261512
 GameObject:
   m_ObjectHideFlags: 0
@@ -1144,7 +1252,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1980378682}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 561076462}
+        m_MethodName: Button_PopCard
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1980378682
@@ -1265,7 +1384,7 @@ GameObject:
   - component: {fileID: 2086028300}
   - component: {fileID: 2086028299}
   m_Layer: 0
-  m_Name: PreviousCard
+  m_Name: SecondCard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1278,16 +1397,16 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2086028297}
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -55, y: 0, z: 0}
+  m_LocalPosition: {x: 1, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 382097973}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -55, y: 0}
-  m_SizeDelta: {x: 130.7, y: 223.4}
+  m_AnchoredPosition: {x: 1, y: 0}
+  m_SizeDelta: {x: 119.1, y: 203.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2086028299
 MonoBehaviour:
@@ -1308,7 +1427,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300052, guid: 3e09749be5372674da4e5a21224e2223, type: 3}
+  m_Sprite: {fileID: 21300104, guid: 3e09749be5372674da4e5a21224e2223, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
